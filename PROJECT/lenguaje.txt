@@ -1,0 +1,34 @@
+.DATA
+var1 BYTE $A3
+var2 WORD $A3
+var3 LONG $A3
+var4 DDATA.B $1
+var5 DDATA.W $2
+var5 DDATA $2
+var6 DDATA.L $3
+.CODE
+DIVU.W D5, D2
+DIVU.W D1, (A7)+
+DIVU.W (A1)+, D3
+DIVU.W (A3), (A4)+
+DIVU.W (A1)+, -(A3)
+DIVUL.W (A1)+, -(A3)
+DIVU.L D5, D2
+DIVU.L D1, (A7)+
+DIVU.L (A1)+, D3
+DIVU.L (A3), (A4)+
+DIVU.L (A1)+, -(A3)
+DIVUL.L (A1)+, -(A3)
+DIVUL (A1)+, -(A3)
+DIVU -(A2), D5
+EORI #0x41
+EORI #0xF
+EORI #0xA3
+EORI #0x34
+EORI #0x4D
+BKPT #0x7
+BKPT #0x3
+BKPT #0x1
+BKPT #0x0
+BKPT #0x2
+END
